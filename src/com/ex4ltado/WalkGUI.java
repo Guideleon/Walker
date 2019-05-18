@@ -5,8 +5,8 @@ import org.rspeer.runetek.api.movement.position.Position;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.nio.charset.Charset;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class WalkGUI extends JFrame {
