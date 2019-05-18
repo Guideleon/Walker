@@ -1,6 +1,5 @@
 package com.ex4ltado;
 
-import net.miginfocom.swing.MigLayout;
 import org.rspeer.runetek.api.commons.BankLocation;
 import org.rspeer.runetek.api.movement.position.Position;
 
