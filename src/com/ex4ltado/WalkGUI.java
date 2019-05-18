@@ -66,6 +66,7 @@ public class WalkGUI extends JFrame {
                         Walker.posToWalk = new Position(Integer.parseInt(posX.getText()), Integer.parseInt(posY.getText()));
                     } catch (NumberFormatException ex){
                         lblError.setText("Put numbers bro, you want ban your account?");
+                        JOptionPane.showMessageDialog(null,"Test");
                     }
                 }
             }
