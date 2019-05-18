@@ -104,8 +104,4 @@ public class WalkGUI extends JFrame {
         add(lblError);
         setVisible(true);
     }
-
-    public static void main(String[] args) {
-        new WalkGUI();
-    }
 }
