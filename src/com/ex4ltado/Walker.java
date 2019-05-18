@@ -27,20 +27,17 @@ public class Walker extends Script {
     }
 
 
-    public static void walkTo(Position position){
+    private static void walkTo(Position position){
         try {
             Movement.walkTo(position);
-            Script.sleep(1000);
+            Script.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public static boolean isInAreaWithPosition(Position position){
-        if (Area.rectangular(position.getX() - 2,position.getY() + 2,position.getX() + 2,position.getY() - 2,position.getFloorLevel()).contains(Players.getLocal().getPosition())){
-            return true;
-        }
-        return false;
+    private static boolean isInAreaWithPosition(Position position){
+        return Area.rectangular(position.getX() - 2, position.getY() + 2, position.getX() + 2, position.getY() - 2, position.getFloorLevel()).contains(Players.getLocal().getPosition());
     }
 
 
@@ -53,7 +50,7 @@ public class Walker extends Script {
         } else if (Movement.getRunEnergy() <= 25 ) {
             canRun = false;
         }
-        Movement.toggleRun(Movement.getRunEnergy() >= 25 && canRun ? true : false);
+        Movement.toggleRun(Movement.getRunEnergy() >= 25 && canRun);
 
 
         if (!isInAreaWithPosition(posToWalk)){
